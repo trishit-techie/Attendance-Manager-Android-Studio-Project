@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttendanceRecordActivity">
+
+    <Button
+        android:id="@+id/presentButton"
+        android:layout_width="391dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="31dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="markPresent"
+        android:text="mark as present"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/absentButton"
+        android:layout_width="393dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="13dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="markAbsent"
+        android:text="mark as absent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presentButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        android:text="Total Classes"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalClassesButton"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/absentButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="16dp"
+        android:text="Present"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/daysPresentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/absentButton" />
+
+    <Button
+        android:id="@+id/totalClassesButton"
+        android:layout_width="98dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="216dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/daysPresentButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/daysPresentButton"
+        android:layout_width="101dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="217dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/attendancePercentageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginBottom="92dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/absentButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
